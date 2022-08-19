@@ -1,0 +1,33 @@
+#!/bin/bash
+
+option="${1}"
+filePath="/root/opt/openvpn/"
+
+function printBanner (){
+echo "pwnvpn :usage: [ htb-lab ] | [ thm-lab ] | [ htb-academy ]" 
+exit 1 # Command to come out of the program with status 1
+}
+
+if ${option}==""
+then 
+printBanner
+fi
+
+case ${option} in 
+   htb-lab) 
+    openvpn ${filepath}htb-lab.ovpn # For accessing the machines
+      ;; 
+   htb-sp) 
+      openvpn ${filepath}htb-sp.ovpn # For accessing the starting point
+      ;;
+   htb-academy) 
+      openvpn ${filepath}htb-academy.ovpn # For accessing the academy
+      ;;
+   thm-lab) 
+      openvpn ${filepath}thm-lab.ovpn # For accessing the machines
+      ;; 
+      # For accessing network (Coming soon)
+   *)  
+      printBanner
+      ;; 
+esac 
