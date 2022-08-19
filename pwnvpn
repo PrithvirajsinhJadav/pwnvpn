@@ -1,7 +1,7 @@
 #!/bin/bash
 
 option="${1}"
-filePath="/root/opt/openvpn/"
+filepath="/root/opt/openvpn/"
 
 function printBanner (){
 echo "pwnvpn :usage: [ htb-lab ] | [ thm-lab ] | [ htb-academy ]" 
